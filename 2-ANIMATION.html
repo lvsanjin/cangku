@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 1px dashed lightcoral;
+            overflow: hidden;
+
+            /*animation-name: myMove;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;*/
+            animation: myMove 1s infinite;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        @keyframes myMove {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(400px, 0) rotate(90deg);
+            }
+            50% {
+                transform: translate(400px, 400px) rotate(180deg);
+            }
+            75% {
+                transform: translate(0, 400px) rotate(270deg);
+            }
+        }
+
+        /*
+         * CSS3中的帧动画：ANIMATION
+         *   1.先制作运动的轨迹  @KEYFRAMES
+         *   2.把制作的轨迹进行播放 ANIMATION
+         */
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="image/touxiang.png" alt=""/>
+</div>
+
+
+</body>
+</html>

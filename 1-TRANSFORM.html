@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+       TRANSFORM
+            ROTATE(? DEG) 控制旋转多少度
+            SCALE 控制缩放
+            TRANSLATE(X,Y) 控制位移  TRANSLATEX/TRANSLATEY
+            SKEW(? DEG) 控制倾斜多少度
+
+       TRANSFORM-ORIGIN 设置变形的基准点
+            CENTER CENTER 默认正中间
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            box-sizing: border-box;
+            margin: 10px auto;
+            width: 200px;
+            height: 200px;
+            border: 1px dashed lightcoral;
+            overflow: hidden;
+
+            transition: 1s;
+        }
+
+        .box img {
+            width: 100%;
+
+            /*设置过渡动画*/
+            /*transition: all 1s linear 0s;*/
+            transition: .3s;
+        }
+
+        .box:hover{
+            box-shadow: 5px 5px 10px #000;
+        }
+
+        .box:hover img {
+            transform: scale(1.5);
+        }
+
+        /*
+         * CSS3中的TRANSITION动画：过度动画
+         *    给元素设置过度效果，当元素的样式发生改变的时候，不是立即改变，而是有动画的效果
+         *    TRANSITION-PROPERTY：设置哪些样式属性更改的时候有动画，默认是ALL
+         *    TRANSITION-DURATION：设置动画运动的时间
+         *    TRANSITION-TIMING-FUNCTION：设置动画运动的方式，默认是LINEAR匀速，还有EASE/EASE-IN/EASE-OUT/EASE-IN-OUT等动画效果
+         *    TRANSITION-DELAY：设置延迟时间
+         */
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="image/touxiang.png" alt=""/>
+</div>
+
+
+</body>
+</html>
